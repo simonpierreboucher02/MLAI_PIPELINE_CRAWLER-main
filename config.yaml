@@ -1,0 +1,29 @@
+# Configuration for WebCrawler
+
+start_url: "https://liquid-air.ca"  # Replace with the URL you want to crawl
+max_depth: 3
+use_playwright: true  # Set to false if you don't want to use Playwright
+
+excluded_paths:
+  - "selecteur-de-produits"  # Add other path segments to exclude if necessary
+
+download_extensions:
+  PDF:
+    - ".pdf"
+  Image:
+    - ".png"
+    - ".jpg"
+    - ".jpeg"
+    - ".gif"
+    - ".svg"
+  Doc:
+    - ".doc"
+    - ".docx"
+    - ".xls"
+    - ".xlsx"
+    - ".ppt"
+    - ".pptx"
+
+language_pattern: "/(fr|en)-(ca|us)/"  # Adjust the pattern according to language/culture
+
+base_dir: "crawler_output"  # Optional: Define the base directory for outputs
